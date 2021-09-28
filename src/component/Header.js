@@ -40,10 +40,11 @@ export default Header;
 
 const Nav = styled.nav`
   height: 70px;
-  background-color: black;
+  background-color: #040714;
   display: flex;
   align-items: center;
   padding: 0 36px;
+  overflow-x: hidden;
 `;
 
 const Logo = styled.img`
