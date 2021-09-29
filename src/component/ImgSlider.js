@@ -36,6 +36,10 @@ export default ImgSlider;
 const Carousel = styled(Slider)`
   margin-top: 20px;
 
+  &:hover button {
+    opacity: 1;
+  }
+
   ul li button {
     &:before {
       font-size: 10px;
@@ -45,9 +49,13 @@ const Carousel = styled(Slider)`
   li.slick-active button:before {
     color: white;
   }
+  /* .slick-arrow {
+    opacity: 0;
+  } */
 
   button {
     z-index: 1;
+    opacity: 0;
   }
 
   .slick-list {
@@ -64,7 +72,7 @@ const Warp = styled.div`
     width: 100%;
     box-shadow: rgb(0 0 0 / 69%) 0px 26px 30px -10px,
       rgb(0 0 0 / 73%) 0px 16px 10px -10px;
-    border-radius: 4px;
+    border-radius: 10px;
 
     &:hover {
       transition-duration: 300ms;
