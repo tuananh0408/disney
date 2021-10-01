@@ -1,11 +1,10 @@
 import React from "react";
 import "./App.css";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-
-// import { Counter } from "./features/counter/Counter";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./component/Header";
 import Home from "./component/Home";
 import Details from "./component/Details";
+import Login from "./component/Login";
 
 function App() {
   return (
@@ -13,11 +12,14 @@ function App() {
       <Router>
         <Header />
         <Switch>
-          <Route path='/details'>
-            <Details />
+          <Route exact path='/'>
+            <Login />
           </Route>
-          <Route path='/'>
+          <Route path='/home'>
             <Home />
+          </Route>
+          <Route path='/details/:id'>
+            <Details />
           </Route>
         </Switch>
       </Router>
